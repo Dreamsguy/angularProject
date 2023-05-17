@@ -18,4 +18,16 @@ export class DataService {
     return this.http.get<Car[]>(this.baseApiUrl + '/api/Car');
   }
 
+  addNewCar(addCarClass: Car): Observable<Car>{
+    return this.http.post<Car>(this.baseApiUrl + '/api/Car', addCarClass);
+  }
+
+  getCar(id: string): Observable<Car>{
+    return this.http.get<Car>(this.baseApiUrl + '/api/Car' + id);
+  }
+
+  updateCar(id: string, updateCar: Car): Observable<Car>{
+    return this.http.put<Car>(this.baseApiUrl + '/api/Car' + id, updateCar);
+  }
+
 }

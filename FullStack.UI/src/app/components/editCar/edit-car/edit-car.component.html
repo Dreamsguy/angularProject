@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Car</h1>
+
+    <div class="row"> 
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateCar()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name </label>
+                  <input [(ngModel)]="carDetails.name"  name="name" style="margin-left: 4em;">
+                </div>
+                <div class="mb-3">
+                    <label for="model" class="form-label">Model </label>
+                    <input [(ngModel)]="carDetails.model" name="model" style="margin-left: 4em;">
+                </div>
+                <div class="mb-3">
+                    <label for="horsepower" class="form-label">Horsepower </label>
+                    <input [(ngModel)]="carDetails.horsepower" name="horsepower" style="margin-left: 1em;">
+                </div>
+                <div class="mb-3"><!-- <p>Choose Car's color: <input type="color" name="bg" value="#ff0000" color = "color" [(ngModel)] = "addCarClass.color"> -->
+                    <label for="color" class="form-label">Color </label>
+                    <input type="text" value="" readonly style="margin-left: 4em;">                   
+                </div>
+                <div class="mb-3">
+                    <label for="cost" class="form-label"> Cost </label>
+                    <input [(ngModel)]="carDetails.cost" name="cost" style="margin-left: 4em;">
+                </div>            
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+
+</div>
